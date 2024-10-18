@@ -29,14 +29,13 @@ vector<uint64_t>  Set::GetPriority() const {
             boolVec[j] = false;
         }
     }
-
+    }
+    
     for (int i = 0; i < _len; i++) {
         if (boolVec[i] != false) {
             cout<<i<<"\n";
             finalVec.push_back(i);
         }
     }
-
     return finalVec;
-}
 }
