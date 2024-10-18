@@ -8,7 +8,7 @@ Set::Set(uint64_t len) {
     }
 }
 
-vector<uint64_t>  Set::GetPriority() const{
+vector<uint64_t>  Set::GetPriority() const {
     vector<uint64_t>finalVec;
     vector<bool>boolVec;
 
@@ -22,7 +22,7 @@ vector<uint64_t>  Set::GetPriority() const{
     for (int i = 2; i < _len; i++) { 
     if (boolVec[i] == true) {
         int j = i;
-        while (j <= _len) {
+        while (j + i <= _len) {
             j += i;
             boolVec[j] = false;
         }
@@ -31,6 +31,7 @@ vector<uint64_t>  Set::GetPriority() const{
 
     for (int i = 0; i < _len; i++) {
         if (boolVec[i] != false) {
+            cout<<i<<"\n";
             finalVec.push_back(i);
         }
     }
