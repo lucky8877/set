@@ -22,15 +22,15 @@ vector<uint64_t>  Set::GetPriority() const {
     boolVec[1] = false;
 
     for (int i = 2; i < _len; i++) { 
-    if (boolVec[i] == true) {
-        int j = i;
-        while (j + i <= _len) {
-            j += i;
-            boolVec[j] = false;
+        if (boolVec[i] == true) {
+            int j = i;
+            while (j + i <= _len) {
+                j += i;
+                boolVec[j] = false;
+            }
         }
     }
-    }
-    
+
     for (int i = 0; i < _len; i++) {
         if (boolVec[i] != false) {
             cout<<i<<"\n";
