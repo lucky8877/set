@@ -33,7 +33,7 @@ vector<uint64_t>  Set::GetPriority() const {
 
     for (int i = 0; i < _len; i++) {
         if (boolVec[i] != false) {
-            cout<<i<<"\n";
+            // cout<<i<<"\n";
             finalVec.push_back(i);
         }
     }
